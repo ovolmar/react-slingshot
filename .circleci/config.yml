@@ -32,6 +32,6 @@ workflow:
       - test:
           requires:
             - build
-      - analyze
+      - analyze:
           requires:
             - test
