@@ -25,7 +25,6 @@ jobs:
       - run: npm i
       - run: npm audit
 
-
 workflow:
   myworkflow:
     jobs:
