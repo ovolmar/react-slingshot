@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  build:
+    checkout:
+    
+    - run: npm run lint
+  test:
+    - run: npm run test
+  analyze:
+    - npm audit
+
+
+workflow:
+  myworkflow:
+    jobs:
+      - build
+      - test
+          requires:
+            - build
+      - analyze
+          requires:
+            - test
